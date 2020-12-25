@@ -5,7 +5,7 @@ public class Task1 {
         int value = 0;
         while (value <= 9) {
             System.out.print("JAVA ");
-            value = value + 1;
+            value++;
         }
     }
 }
