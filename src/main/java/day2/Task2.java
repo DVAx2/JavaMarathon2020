@@ -10,12 +10,10 @@ public class Task2 {
         if (a >= b) {
             System.out.println("Некорректный ввод");
         } else {
-            for (int i = a; i < b; i++) {
-                if (i == a) {
-                } else if (i % 5 == 0 && i % 10 != 0) {
+            for (int i = ++a; i < b; i++){
+                if (i % 5 == 0 && i % 10 != 0)
                     System.out.print(i + " ");
                 }
-            }
         }
     }
 }
