@@ -23,7 +23,7 @@ public class Airplane {
     private int weight;
     private int fuel;
 
-    Airplane(String producer, int year, int length, int weight) {
+    public Airplane(String producer, int year, int length, int weight) {
         this.producer = producer;
         this.year = year;
         this.length = length;
@@ -54,13 +54,12 @@ public class Airplane {
         return fuel;
     }
 
-    int fillUp(int n) {
+    public void fillUp(int n) {
         int fuelNow = fuel + n;
         this.fuel = fuelNow;
-        return fuel;
     }
 
-    void info() {
-        System.out.println("Изготовитель: " + producer + ", год выпуска: " + year + ", длина: " + length + ", вес:" + weight + ", количество топлива в баке: " + fuel);
+    public void info() {
+        System.out.println("Изготовитель: " + producer + ", год выпуска: " + year + ", длина: " + length + ", вес: " + weight + ", количество топлива в баке: " + fuel);
     }
 }

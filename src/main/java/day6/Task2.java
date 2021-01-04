@@ -10,9 +10,9 @@ public class Task2 {
     public static void main(String[] args) {
         Airplane airplane = new Airplane("Sukhoi Civil Aircraft Company", 2020, 30, 24250);
         airplane.setFuel(0);
-        //plane.info();
+        //airplane.info();
         airplane.fillUp(5);
-        //plane.info();
+        //airplane.info();
 
         Airplane airplane1 = new Airplane("Boeing", 2012, 31, 25400);
         airplane1.setYear(2015);
@@ -21,5 +21,4 @@ public class Task2 {
         airplane1.fillUp(50);
         airplane1.info();
     }
-
 }

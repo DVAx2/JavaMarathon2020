@@ -15,16 +15,15 @@ public class Task1 {
     public static void main(String[] args) {
         Car car = new Car();
         car.setModel("Aura");
-        car.setYearOfIssue(2005);
+        car.setYear(2005);
         car.info();
-        System.out.println(car.getModel() + " " + car.getYearOfIssue() + " ");
-        int difference = car.yearDifference(2021);
-        System.out.println("Срок эксплуатации: " + difference);
+        System.out.println(car.getModel() + " " + car.getYear() + " ");
+        System.out.println("Срок эксплуатации: " + car.yearDifference(2021));
 
-        Motorbike motorbike = new Motorbike("Suzuki", 2003);
+
+        Motorbike motorbike = new Motorbike("Suzuki","red", 2003);
         motorbike.info();
         motorbike.infoMotobike();
-        int difference1 = motorbike.yearDifference(2021);
-        System.out.println("Срок эксплуатации: " + difference1);
+        System.out.println("Срок эксплуатации: " + motorbike.yearDifference(2021));
     }
 }

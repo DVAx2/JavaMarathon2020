@@ -25,7 +25,7 @@ public class Task2 {
         Random rand = new Random();
         for (int i = 0; i < massiv.length; i++) {
             massiv[i] = rand.nextInt(10000);
-        }//System.out.println(Arrays.toString(massiv));
+        } System.out.println(Arrays.toString(massiv));
         int maxNumber = massiv[0];
         int minNumber = massiv[0];
         for (int x : massiv) {
@@ -40,24 +40,21 @@ public class Task2 {
             }
         }
         System.out.println("- наименьший элемент массива: " + minNumber);
-        for (int x : massiv) {
-            if (x < minNumber) {
-                minNumber = x;
-            }
-        }
+
         for (int x : massiv) {
             balance = x % 10;
             if (balance == 0) {
                 counteZero++;
-            }
-        }
-        System.out.println("- количество элементов массива, оканчивающихся на 0: " + counteZero);
-        for (int x : massiv) {
-            balance = x % 10;
-            if (balance == 0) {
                 sum += x;
             }
         }
+        System.out.println("- количество элементов массива, оканчивающихся на 0: " + counteZero);
+        /*for (int x : massiv) {
+            balance = x % 10;
+            if (balance == 0) {
+            sum += x;
+            }
+        }*/
         System.out.println("- сумму элементов массива, оканчивающихся на 0: " + sum);
     }
 }

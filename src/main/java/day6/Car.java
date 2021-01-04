@@ -1,16 +1,17 @@
 package day6;
 
-public class Car {
-    private int yearOfIssue;
-    private String model;
-    //private int yearNow;
 
-    public void setYearOfIssue(int yearOfIssue) {
-        this.yearOfIssue = yearOfIssue;
+public class Car {
+    private int year;
+    private String model;
+
+
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public int getYearOfIssue() {
-        return yearOfIssue;
+    public int getYear() {
+        return year;
     }
 
     public void setModel(String model) {
@@ -22,14 +23,16 @@ public class Car {
     }
 
     public void info() {
-        System.out.println("Этот автомобиль:");
+        System.out.println("Это автомобиль");
     }
 
-    int yearDifference(int inputYear) {
-        int difference = inputYear - yearOfIssue;
+    public int yearDifference(int inputYear) {
+
+        int difference = inputYear - year;
         if (difference < 0) {
             difference = -1 * difference;
         }
         return difference;
     }
+
 }

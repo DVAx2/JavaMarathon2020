@@ -22,8 +22,8 @@ import java.util.Random;
 public class Teacher {
     private String name;
     private String lesson;
-    private int studentEvaluate;
-    private String student;
+    //private int studentEvaluate;
+
     Random rand = new Random();
 
     Teacher(String name, String lesson) {
@@ -31,14 +31,20 @@ public class Teacher {
         this.lesson = lesson;
     }
 
-    String evaluate(String student) {
-        int studentEvaluate = rand.nextInt(4) + 2;
-        this.studentEvaluate = studentEvaluate;
-        this.student = student;
-        return student;
+    public void evaluate(Student s) {
+        int studentEvaluate = rand.nextInt(4)+2;
+        //this.studentEvaluate = studentEvaluate;
+        String mark;
+        if(studentEvaluate==5){
+            mark = "отлично";
+        }else if(studentEvaluate==4){
+            mark = "хорошо";
+        }else if(studentEvaluate==3){
+            mark = "удовлетворительно";
+        }else{mark = "неудовлетворительно";
+        }
+
+        System.out.println("Преподаватель " + name + " оценил студента с именем " + s.getName() + " по предмету " + lesson + " на оценку " + mark + ".");
     }
 
-    void info() {
-        System.out.println("Преподаватель " + name + " оценил студента с именем " + student + " по предмету " + lesson + " на оценку " + studentEvaluate + ".");
-    }
 }

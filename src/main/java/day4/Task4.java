@@ -32,6 +32,7 @@ public class Task4 {
         int counter = 0;
         for (int i = 0; i < mas.length - 2; i++) {
             int sum = 0;
+
             for (int j = i; j < i + 3; j++) {
                 sum += mas[j];
             }

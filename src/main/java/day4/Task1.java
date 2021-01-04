@@ -40,6 +40,7 @@ public class Task1 {
         int evenNumber = 0;
         int oddNumber = 0;
         System.out.println("Введено число " + enter + ". Сгенерирован следующий массив:");
+
         for (int i = 0; i < massiv.length; i++) {
             massiv[i] = rand.nextInt(10);
         }
@@ -66,7 +67,7 @@ public class Task1 {
         System.out.println("Количество четных чисел: " + evenNumber);
         System.out.println("Количество нечетных чисел: " + oddNumber);
         for (int number : massiv) {
-            sum = sum + number;
+            sum += number;
         }
         System.out.println("Сумма всех элементов массива:" + sum);
     }
